@@ -250,7 +250,7 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 6rem;
 }
 
 .about .content .box-container .box {
@@ -400,6 +400,7 @@ section {
   padding: 1rem 0;
   font-size: 1.4rem;
   color: #aaa;
+  text-align: left;
 }
 
 .pricing .plan .list p i {
@@ -472,31 +473,40 @@ section {
 }
 
 .banner {
+  display: flex;
+  flex-direction: column;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/banner-bg.jpg) no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/banner-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner span {
   font-size: 2rem;
   color: #f00;
+  padding: 1rem;
 }
 
 .banner h3 {
-  padding-top: 1rem;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  color: rgb(20, 20, 20);
+  background-color: white;
   text-transform: uppercase;
-  font-size: 3.5rem;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .banner p {
   margin: 1rem auto;
   max-width: 60rem;
-  font-size: 1.5rem;
-  color: #aaa;
+  font-size: 2rem;
+  color: white;
   line-height: 2;
 }
 
@@ -811,19 +821,19 @@ section {
 
     span{
       font-size: 2rem;
-      color:$red;
+      color:red;
     }
 
     h3{
       font-size: 3rem;
-      color:$white;
+      color:white;
       padding-top: 1rem;
     }
 
     p{
       font-size: 1.5rem;
       line-height: 2;
-      color:$light-white;
+      color:white;
       padding:1rem 0;
     }
   }
@@ -832,13 +842,13 @@ section {
     flex:1 1 60rem;
 
     .slide{
-      background:linear-gradient(130deg,  $light-bg 93%, transparent 90%);
+      background:linear-gradient(130deg,  light-bg 93%, transparent 90%);
       padding:2rem 3rem;
 
       p{
         font-size: 1.5rem;
         line-height: 2;
-        color:$light-white;
+        color:white;
       }
 
       .user{
@@ -856,11 +866,11 @@ section {
 
         h3{
           font-size: 2rem;
-          color:$white;
+          color:white;
         }
 
         span{
-          color:$red;
+          color:red;
           font-size: 1.5rem;
         }
 
@@ -868,7 +878,7 @@ section {
           font-size: 5rem;
           margin-left: auto;
           margin-right: 2rem;
-          color:$red;
+          color:red;
         }
       }
     }
@@ -878,7 +888,7 @@ section {
 .blogs{
 
   .slide{
-    background: $light-bg;
+    background: light-bg;
     margin-bottom: 7rem;
 
     &:hover .image img{
@@ -905,28 +915,28 @@ section {
         font-size: 1.5rem;
 
         a{
-          color:$red;
+          color:red;
 
           &:hover{
-            color:$white;
+            color:white;
           }
         }
 
         span{
-          color:$white;
+          color:white;
           padding:0 1rem;
         }
       }
 
       h3{
         font-size: 2rem;
-        color:$white;
+        color:white;
         line-height: 1.5;
       }
 
       p{
         font-size: 1.5rem;
-        color:$light-white;
+        color:light-white;
         line-height: 2;
         padding:1rem 0;
       }
@@ -937,35 +947,37 @@ section {
 .footer{
 
   .box-container{
-    @include grid(25rem);
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
 
     .box{
 
       h3{
         font-size: 2.2rem;
-        color:$white;
+        color:white;
         padding:1rem 0;
       }
 
       .links{
         font-size: 1.5rem;
         display: block;
-        color:$light-white;
+        color:light-white;
         padding:1rem 0;
 
         &:hover{
-          color:$red;
+          color:red;
         }
       }
 
       p{
         font-size: 1.5rem;
-        color:$light-white;
+        color:light-white;
         padding:1rem 0;
 
         i{
           padding-right: .5rem;
-          color:$red;
+          color:red;
         }
       }
 
@@ -977,14 +989,14 @@ section {
           width: 4.5rem;
           line-height: 4.5rem;
           font-size: 1.7rem;
-          color:$white;
-          background: $light-bg;
+          color:white;
+          background: light-bg;
           border-radius: 50%;
           margin-right: .5rem;
           text-align:center;
 
           &:hover{
-            background: $red;
+            background: red;
           }
         }
       }
@@ -994,10 +1006,10 @@ section {
         .email{
           margin-bottom: 1rem;
           width: 100%;
-          background: $light-bg;
+          background: light-bg;
           padding:1.2rem;
           font-size: 1.5rem;
-          color:$white;
+          color:white;
           text-transform: none;
         }
       }
@@ -1009,12 +1021,12 @@ section {
   font-size: 2rem;
   text-align:center;
   padding:2rem;
-  color:$white;
-  background: $light-bg;
+  color:white;
+  background: light-bg;
   line-height: 1.5;
 
   span{
-    color:$red;
+    color:red;
   }
 }
 
@@ -1076,7 +1088,7 @@ section {
     .navbar{
       position: absolute;
       top:99%; left:0; right:0;
-      background: $black;
+      background: black;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
       &.active{
